@@ -88,7 +88,7 @@ if (isset($wp_version)) {
 		remove_filter('the_content',     'wpautop');
         remove_filter('the_content_rss', 'wpautop');
 		remove_filter('the_excerpt',     'wpautop');
-		add_filter('the_content',     'mdwp_MarkdownPost', 6);
+		add_filter('the_content',     'mdwp_MarkdownPost', 8);
         add_filter('the_content_rss', 'mdwp_MarkdownPost', 6);
 		add_filter('get_the_excerpt', 'mdwp_MarkdownPost', 6);
 		add_filter('get_the_excerpt', 'trim', 7);
