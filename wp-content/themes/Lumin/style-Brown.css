@@ -1,0 +1,84 @@
+div#header { background:#323232 url(images/brown/top-bg.png) repeat-x scroll left top; border-bottom: 1px solid #998270; }
+	div#header p#slogan { color: #919191; }
+	div#header div#search-form input { color:#7f7268; }
+	div#header ul#top-navigation li a { color: #e0e0e0; }
+	div#header ul#top-navigation > li.current_page_item, div#header ul#top-navigation > li:hover, div#header ul#top-navigation > li.current-cat {
+background: url(images/brown/active-bg-left.png) no-repeat scroll 0 5px; }
+	div#header ul#top-navigation > li.current_page_item > a, div#header ul#top-navigation > li:hover > a, div#header ul#top-navigation > li.current-cat > a { background: url(images/brown/active-bg-right.png) no-repeat scroll right 5px; }
+		div#header ul#top-navigation li ul { background: url(images/brown/drop-menu-topbg.png) no-repeat scroll left top; }
+		div#header ul#top-navigation li ul li { background:#292620 url(images/brown/dropdown-li-separator.png) repeat-x scroll left bottom; }
+		div#header ul#top-navigation li ul a { color:#8a8075; }
+		div#header ul#top-navigation li ul a:hover { background-color:#322f29; }
+	div#header div#search-form { background: url(images/brown/search-hover-bg.png) no-repeat scroll 0 0;	}
+	
+	div#logo-highlight { background: url(images/brown/logo-highlight.png) no-repeat scroll left top; }
+div#main-area { background: url(images/brown/main-bg.jpg) repeat scroll 0 0; }
+	div#slider-control div.featitem.active { background: url(images/brown/featitem-active-bg.jpg) no-repeat scroll 0 0; }
+	div#slider-control div.featitem h2 { background: url(images/brown/feat-heading-separator.jpg) no-repeat scroll left bottom; }
+	div#slider-control div.featitem div.item-content { background: url(images/brown/featitem-separator.png) repeat-x scroll left bottom; }
+	div#slider-control div.featitem p.excerpt { color: #d2c5b7; }
+	span.feat-overlay { background: url(images/brown/overlay.png) no-repeat scroll 0 0; }
+	p#slogan-phrase { color: #36312b; }
+	
+	div#main-area div#from-blog ul.control li { background: url(images/brown/li-separator.png) no-repeat scroll right bottom; }
+	
+	div#main-area div#from-blog div.content { background: url(images/brown/content-bg.png) repeat-y scroll 0 0; }
+	
+	div#main-area div#from-blog div.content h3 { background: url(images/brown/from-blog-top.png) no-repeat scroll 0 0; }
+	div#from-blog div.content div.post { background: url(images/brown/fromblog-separator.png) no-repeat scroll left bottom; }
+	div#from-blog div.content div#recent-tabbed, div#from-blog div.content div#popular-tabbed, div#from-blog div.content div#random-tabbed {
+background: url(images/brown/fromblog-separator.png) no-repeat scroll left top; }
+	div#from-blog div.content div#content-bottom { background: url(images/brown/content-bottom.png) no-repeat scroll left bottom; }
+	div#from-blog div.content div.post p.meta, div#from-blog div.content div.post p.meta a { color:#eadfd2; }	
+	
+	div#main-area-wrap { background: url(images/brown/mainarea-bottom-bg.png) repeat-x scroll left bottom; }
+
+	div#footer-widget-area { background:#36312b url(images/brown/footer-widget-bg.png) repeat-x scroll left top; }
+	div#footer-widget-area div#recent-projects div.project-item { background:#3f3931; border:1px solid #4e473d; }
+	div#footer { background:#2e2922; border-top:1px solid #423d36; }
+		div#footer p { color:#8d8378; }
+		div.footer-widget, div.footer-widget a { color:#b7ada2; }
+		div.footer-widget h4 { background: url(images/brown/widget-h4-bottom.png) no-repeat scroll left bottom; }
+	
+	div.thumb-gallery { background:#60564b none repeat scroll 0 0; border:1px solid #7d746c; }
+		div.thumb-gallery img.preview-thumb { border:1px solid #362c21; }
+		
+	h1#post-title { background: url(images/brown/heading-separator.jpg) no-repeat scroll left bottom; }
+	#main div.post { background: url(images/brown/post-bottom-bg.jpg) no-repeat scroll left bottom; }
+	#main .wp-pagenavi span.current { background: url(images/brown/pagenavi-current.png) no-repeat scroll 0 0; }
+	#main .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:visited { background: url(images/brown/pagenavi-bg.png) no-repeat scroll 0 0; }
+	
+	#main-area #sidebar div.widget div.content-top { background: url(images/brown/widget-top.jpg) no-repeat scroll left top; }
+	div.widget h3.title { background: url(images/brown/widget-heading-bottom.jpg) no-repeat scroll left bottom; }
+	#main-area #sidebar div.widget { background: url(images/brown/widget-bg.jpg) repeat-y scroll 0 0; }
+	#main-area #sidebar div.widget div.content-bottom { background: url(images/brown/widget-bottom.jpg) no-repeat scroll left bottom; }
+	
+	div.footer-widget div.widget-content ul li { background: url(images/brown/widget-footer-bullet.png) no-repeat scroll 0 10px; }
+	div.widget div.widget-content ul li { background: url(images/brown/widget-li-bullet.png) no-repeat scroll 0 10px; }
+	img#about-image { border: 2px solid #4a4541; }
+	
+	div.cat-meta-top { background: url(images/brown/cat-meta-top.png) no-repeat scroll 0 0; }
+	p.post-meta { background: url(images/brown/cat-meta-bg.png) repeat-y scroll 0 0; }
+	div.cat-meta-bottom { background: url(images/brown/cat-meta-bottom.png) no-repeat scroll 0 0; }
+	
+	img.thumbnail-post { background:#635b55; border:1px solid #79736d; }
+	div.entry { background: url(images/brown/entry-separator.png) no-repeat scroll left bottom; }
+	
+	p.single-post-meta { background: url(images/brown/post-meta-bg.png) repeat-y scroll 0 0; }
+	p.single-post-meta span.post-comments { background: url(images/brown/post-comments-bg.png) no-repeat scroll 0 0; }
+	div.single-meta-bottom { background: url(images/brown/single-meta-bottom.png) no-repeat scroll 0 0; }
+	
+	p#comments { background: url(images/brown/comment-number-bg.png) no-repeat scroll left bottom; }
+	#main ol.commentlist { background: url(images/brown/post-bottom-bg.jpg) no-repeat scroll left bottom; }
+	img.avatar { border:5px solid #625d56; }
+	.comment-author span.fn { background:#5e5652; }
+	.commentmetadata { border-bottom:1px solid #837d75; }
+	
+	form#commentform input#author, form#commentform input#email, form#commentform input#url, form#commentform textarea {
+background:#4f473d; border:1px solid #80736b; }
+	ol.commentlist li { background: url(images/brown/comment-bottom.png) no-repeat scroll left bottom; }
+	#main ol.commentlist ul.children { background: url(images/brown/children-left.png) repeat-y scroll 0 0; }
+	ol.commentlist ul.children li { background: url(images/brown/comment-child-top.png) no-repeat scroll right top; }
+	
+	div#main-area div#from-blog ul.control li.ui-state-active a { background: url(images/brown/active-bg.png) repeat-x scroll left bottom; }
+	.wp-caption { background-color:#655d53; border:1px solid #7b7169; }

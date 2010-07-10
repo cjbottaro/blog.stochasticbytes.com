@@ -1,0 +1,18 @@
+span.sf-sub-indicator { padding-left: 2px; }
+div#header { z-index: 2; position: relative; }
+div#featured-slider { z-index: 1; position: relative; }
+span.feat-overlay { cursor: pointer; }
+div#main-area div#from-blog div.content { height: 1%; }
+div#from-blog div.content div.post { position: relative !important; }
+div#footer-widget-area  div.project-popup a { cursor: pointer; }
+div#main-area-wrap { display: block; height: 35px; zoom: 1; padding: 0px; }
+div.footer-widget a { color:#A6AEB4 !important; }
+div.footer-widget a:hover { color: #ffffff !important; }
+div#main-area a.readmore span, div#footer-widget-area a.readmore span, a.comment-reply-link { display: inline-block; padding:3px 12px 5px 0; cursor: pointer; }
+div#main-area div#from-blog ul.control li.ui-state-active a { background: url(images/active-bg.jpg) repeat-x left bottom; }
+.js #featured-slider, .js div#recent-projects, .js div#from-blog div.content {display: block;}
+#main .wp-pagenavi span.pages { display: inline-block; }
+div.cat-meta-top { margin-bottom: -8px; }
+div.comment-body { overflow:hidden !important; height: 1%; }
+
+#main ol.commentlist ul.children { margin-left: 83px; }

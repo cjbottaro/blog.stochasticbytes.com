@@ -1,0 +1,8 @@
+span.sf-sub-indicator {padding-left: 2px;}
+div#header { z-index: 2; position: relative; }
+div#featured-slider { z-index: 1; position: relative; }
+span.feat-overlay { cursor: pointer; }
+
+div#footer-widget-area  div.project-popup a { cursor: pointer; }
+#main .wp-pagenavi span.pages { display: inline-block; }
+#main ol.commentlist ul.children { margin-left: 83px; }
