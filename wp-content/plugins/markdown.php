@@ -11,6 +11,29 @@
 # <http://daringfireball.net/projects/markdown/>
 #
 
+require_once 'geshi/geshi.php';
+function doGeshiHighlighting(&$codeblock)  {
+  
+  # Fenced codeblocks leave trailing whitepace
+  # which causes Geshi to output newlines.
+  $codeblock = preg_replace('/\s+$/', '', $codeblock);
+  
+  # Look for both {{lang:ruby}} and #!ruby
+  $regex = '/(^\{\{lang:(\w+)\}\}\n)|(^#\!(\w+)\n)/';
+  
+  if (preg_match($regex, $codeblock, $match)) {
+    $codeblock = preg_replace($regex, '', $codeblock);
+    if ($match[1])
+      $lang = $match[2];
+    else
+      $lang = $match[4];
+    $geshi = new GeSHi($codeblock, $lang);
+    $codeblock = $geshi->parse_code();
+    return true;
+  }
+  else
+    return false;
+}
 
 define( 'MARKDOWN_VERSION',  "1.0.1n" ); # Sat 10 Oct 2009
 define( 'MARKDOWNEXTRA_VERSION',  "1.2.4" ); # Sat 10 Oct 2009
@@ -1121,12 +1144,15 @@ class Markdown_Parser {
     $codeblock = $matches[1];
 
     $codeblock = $this->outdent($codeblock);
-    $codeblock = htmlspecialchars($codeblock, ENT_NOQUOTES);
 
     # trim leading newlines and trailing newlines
     $codeblock = preg_replace('/\A\n+|\n+\z/', '', $codeblock);
-
-    $codeblock = "<pre><code>$codeblock\n</code></pre>";
+    
+    if (doGeshiHighlighting($codeblock) == false) {
+      $codeblock = htmlspecialchars($codeblock, ENT_NOQUOTES);
+      $codeblock = "<pre><code>$codeblock\n</code></pre>";
+    }
+    
     return "\n\n".$this->hashBlock($codeblock)."\n\n";
   }
 
@@ -2571,10 +2597,16 @@ class MarkdownExtra_Parser extends Markdown_Parser {
   }
   function _doFencedCodeBlocks_callback($matches) {
     $codeblock = $matches[2];
-    $codeblock = htmlspecialchars($codeblock, ENT_NOQUOTES);
+    
     $codeblock = preg_replace_callback('/^\n+/',
       array(&$this, '_doFencedCodeBlocks_newlines'), $codeblock);
-    $codeblock = "<pre><code>$codeblock</code></pre>";
+    
+    # Look for both {{lang:ruby}} and #!ruby
+    if (doGeshiHighlighting($codeblock) == false) {
+      $codeblock = htmlspecialchars($codeblock, ENT_NOQUOTES);
+      $codeblock = "<pre><code>$codeblock</code></pre>";
+    }
+    
     return "\n\n".$this->hashBlock($codeblock)."\n\n";
   }
   function _doFencedCodeBlocks_newlines($matches) {
