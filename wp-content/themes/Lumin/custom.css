@@ -7,3 +7,36 @@ pre {
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+/* Post sub headings. */
+div.post h4 { color: #002d5a; margin-top: 10px; font-weight: bold; }
+
+/* Style for links in posts. */
+#main-area div#main div.post a {
+  color: #333333;
+  font-weight: normal;
+}
+#main-area div#main div.post a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Style for "edit this page" in posts. */
+#main-area div#main div.post a.post-edit-link {
+  color: white;
+  font-weight: bold;
+}
+
+/* Style for "read more" link in /category/blog list */
+#main-area div#main div.post a.readmore {
+  color: white;
+}
+
+/* Style for post title link in /category/blog list */
+#main-area #main .entry h2.cat-title a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* For highlighting text, like in the directory project post. */
+hl { background: #808000; }
