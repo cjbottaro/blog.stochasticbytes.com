@@ -13,12 +13,12 @@
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/jquery.fancybox-1.2.6.css" type="text/css" media="screen" />
 
 <!--[if lt IE 7]>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/ie6style.css" />
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/DD_belatedPNG_0.0.8a-min.js"></script>
-	<script type="text/javascript">DD_belatedPNG.fix('img#logo, p#slogan, .nav li ul, ul#top-navigation li ul a, div#search-icon, div#header div#search-form, div#featured-slider, span.feat-overlay,  div#from-blog ul.control li img, span.project-overlay, div#main-area div.page-block h3, p#slogan-phrase, div#main-area div.page-block div.separator, div#main-area a.readmore, div#main-area a.readmore span, div#from-blog div.content div.post p.meta a.comments-number, div#footer-widget-area a.readmore, div#footer-widget-area a.readmore span, div#from-blog img#subscribe, div.widget h3.title span, h1#post-title span, div.post p.date, div.post p.meta span.comments-number a, div.reply-container, a.comment-reply-link');</script>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/ie6style.css" />
+  <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/DD_belatedPNG_0.0.8a-min.js"></script>
+  <script type="text/javascript">DD_belatedPNG.fix('img#logo, p#slogan, .nav li ul, ul#top-navigation li ul a, div#search-icon, div#header div#search-form, div#featured-slider, span.feat-overlay,  div#from-blog ul.control li img, span.project-overlay, div#main-area div.page-block h3, p#slogan-phrase, div#main-area div.page-block div.separator, div#main-area a.readmore, div#main-area a.readmore span, div#from-blog div.content div.post p.meta a.comments-number, div#footer-widget-area a.readmore, div#footer-widget-area a.readmore span, div#from-blog img#subscribe, div.widget h3.title span, h1#post-title span, div.post p.date, div.post p.meta span.comments-number a, div.reply-container, a.comment-reply-link');</script>
 <![endif]-->
 <!--[if IE 7]>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/ie7style.css" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/ie7style.css" />
 <![endif]-->
 
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -26,7 +26,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script type="text/javascript">
-	document.documentElement.className = 'js';
+  document.documentElement.className = 'js';
 </script>
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -34,46 +34,43 @@
 
 </head>
 <body <?php if (is_home()) echo('id="home"');?>>
-	<div id="header">
-		<div class="container">
-			<div id="logo-highlight"></div>
-			
-			<!-- Logo -->
-			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="logo" id="logo" /></a>
-			
-			<p id="slogan"><?php echo(get_option('lumin_tagline')); ?></p>
-			
-			<?php $menuClass = 'superfish nav';
-			$menuID = 'top-navigation';
-			$primaryNav = '';
-			
-			if (function_exists('wp_nav_menu')) {
-				$primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => $menuID, 'echo' => false ) );
-			};
-			if ($primaryNav == '') { ?>
-				<ul id="<?php echo $menuID; ?>" class="<?php echo $menuClass; ?>">
-					<?php if (get_option('lumin_home_link') == 'on') { ?>
-						<li <?php if (is_front_page()) echo('class="current_page_item"') ?>><a href="<?php bloginfo('url'); ?>"><?php _e('Home','Lumin'); ?></a></li>
-					<?php }; ?>
+  <div id="header">
+    <div class="container">
+      <div id="logo-highlight"></div>
+      
+      <!-- Logo -->
+      <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="logo" id="logo" /></a>
+      
+      <p id="slogan"><?php echo(get_option('lumin_tagline')); ?></p>
+      
+      <?php $menuClass = 'superfish nav';
+      $menuID = 'top-navigation';
+      $primaryNav = '';
+      
+      if (function_exists('wp_nav_menu')) {
+        $primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => $menuID, 'echo' => false ) );
+      };
+      if ($primaryNav == '') { ?>
+        <ul id="<?php echo $menuID; ?>" class="<?php echo $menuClass; ?>">
+          <li><a href="javascript:alert('Sorry, no home yet.')">Home</a></li>
+          <li><a href="javascript:alert('Sorry, no about yet.')">About</a></li>
+          <li class="current-cat"><a href="/">Blog</a></li>
+          <li><a href="javascript:alert('Sorry, no projects yet.')">Projects</a></li>
+        </ul> <!-- end ul.nav -->
+      <?php }
+      else echo($primaryNav); ?>
+      
+      <div id="search-icon">
+        <a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/search-icon.png" alt="search" id="search"/></a>
+      </div> <!-- end search-icon -->
+      
+      <div id="search-form">
+        <form method="get" id="searchform1" action="<?php bloginfo('url'); ?>/">
+          <input type="text" value="<?php _e('search this site...','Lumin'); ?>" name="s" id="searchinput" />
+        </form>
+      </div> <!-- end searchform -->
+    </div> <!-- end header/container -->
+  </div> <!-- end header -->
 
-					<?php show_categories_menu($menuClass,false); ?>
-					
-					<?php show_page_menu($menuClass,false,false); ?>
-				</ul> <!-- end ul.nav -->
-			<?php }
-			else echo($primaryNav); ?>
-			
-			<div id="search-icon">
-				<a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/search-icon.png" alt="search" id="search"/></a>
-			</div> <!-- end search-icon -->
-			
-			<div id="search-form">
-				<form method="get" id="searchform1" action="<?php bloginfo('url'); ?>/">
-					<input type="text" value="<?php _e('search this site...','Lumin'); ?>" name="s" id="searchinput" />
-				</form>
-			</div> <!-- end searchform -->
-		</div> <!-- end header/container -->
-	</div> <!-- end header -->
-
-	<div id="main-area">
-		<div class="container">
+  <div id="main-area">
+    <div class="container">
